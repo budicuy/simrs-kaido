@@ -56,7 +56,7 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->spa()
-            ->path('')
+            ->path('admin')
             ->brandLogo('/image/logo_rs.png')
             ->brandLogoHeight('50px')
             ->when($this->settings->login_enabled ?? true, fn($panel) => $panel->login(Login::class))
