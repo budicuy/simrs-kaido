@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\LoginRequest;
 use App\Http\Resources\LoginResource;
 use App\Models\User;
+use App\Models\Role;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -17,7 +18,7 @@ class AuthController extends Controller
         //validate dengan Auth::attempt
         if (Auth::attempt($request->only('email', 'password'))) {
             //jika berhasil buat token
-            $user = User::where('email', $request->email)->first();
+            $user = User::with('roles')->where('email', $request->email)->first();
             //token lama dihapus
             $user->tokens()->delete();
             //token baru di create
