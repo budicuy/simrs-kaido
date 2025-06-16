@@ -12,3 +12,6 @@ Route::get('/user', function (Request $request) {
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
 
+Route::get('/dashboard/counts', [PostController::class, 'getCounts'])
+    ->name('dashboard.counts');
+
