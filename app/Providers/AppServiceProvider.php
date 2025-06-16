@@ -7,6 +7,7 @@ use Filament\Support\Facades\FilamentView;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -26,6 +27,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        // Cek jika aplikasi berjalan di lingkungan produksi
+        if ($this->app->environment('production')) {
+            // Paksa semua URL yang dibuat Laravel menggunakan https
+            URL::forceScheme('https');
+        }
+
         //
         Gate::define('viewApiDocs', function (User $user) {
             return true;
