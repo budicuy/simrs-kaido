@@ -51,10 +51,12 @@ class UserResource extends Resource
                                 ->default(now())
                                 ->dehydrated(fn ($state) => filled($state))
                                 ->visible(fn (string $context):bool => $context === 'edit'),
-                            Select::make('roles')
-                                ->relationship('roles', 'name')
-                                ->multiple()
-                                ->preload(),
+                            Select::make('role')
+                                ->required()
+                                ->options([
+                                    'admin' => 'Admin',
+                                    'user' => 'User',
+                                ]),
                             TextInput::make('password')
                                 ->password()
                                 ->maxLength(255)
