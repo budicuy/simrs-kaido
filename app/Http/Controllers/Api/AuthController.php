@@ -46,7 +46,7 @@ class AuthController extends Controller
         } else {
             //jika gagal kirim response error
             return response()->json([
-                'message' => 'Invalid Credentials'
+                'message' => 'Invald email or password'
             ], 401);
         }
     }
