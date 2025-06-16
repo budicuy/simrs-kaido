@@ -35,6 +35,7 @@ class AuthController extends Controller
                 'token' => $token,
                 'user' => $user
             ]);
+            $roleId = $user->roles->first()->id ?? null;
         } else {
             //jika gagal kirim response error
             return response()->json([
