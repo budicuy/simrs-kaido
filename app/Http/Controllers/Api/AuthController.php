@@ -36,6 +36,17 @@ class AuthController extends Controller
                 'user' => $user
             ]);
             $roleId = $user->roles->first()->id ?? null;
+            return response()->json([
+            'message'      => 'Login Berhasil',
+            'access_token' => $token,
+            'token_type'   => 'Bearer',
+            'user'         => [ // OBJEK 'user' INI SANGAT PENTING
+                'id'    => $user->id,
+                'name'  => $user->name,
+                'email' => $user->email,
+                'roles' => (string) $roleId // Kirim ID peran sebagai string
+            ]
+        ]);
         } else {
             //jika gagal kirim response error
             return response()->json([
