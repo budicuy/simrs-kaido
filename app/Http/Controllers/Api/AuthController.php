@@ -31,10 +31,6 @@ class AuthController extends Controller
             //create token with abilities
             $token = $user->createToken('token', $abilities)->plainTextToken;
 
-            return new LoginResource([
-                'token' => $token,
-                'user' => $user
-            ]);
             $roleId = $user->roles->first()->id ?? null;
             return response()->json([
             'message'      => 'Login Berhasil',
