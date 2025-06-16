@@ -55,6 +55,7 @@ class AdminPanelProvider extends PanelProvider
         return $panel
             ->default()
             ->id('admin')
+            ->spa()
             ->path('')
             ->brandLogo('/image/logo_rs.png')
             ->brandLogoHeight('50px')
