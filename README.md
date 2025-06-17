@@ -136,7 +136,7 @@ A powerful and opinionated FilamentPHP starter kit designed to accelerate your a
 13. Next step is to setup the RBAC, first generate the role and permission
 
     ```php
-    php artisan shield:generate --all
+   composer install && php artisan shield:generate --all && php artisan shield:super-admin
     ```
 
 14. It will ask which panel do you want to generate permission/policies for choose the admin panel.

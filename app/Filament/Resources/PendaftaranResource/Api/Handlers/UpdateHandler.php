@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Filament\Resources\PendaftaranResource\Api\Handlers;
 
 use Illuminate\Http\Request;
@@ -6,8 +7,9 @@ use Rupadana\ApiService\Http\Handlers;
 use App\Filament\Resources\PendaftaranResource;
 use App\Filament\Resources\PendaftaranResource\Api\Requests\UpdatePendaftaranRequest;
 
-class UpdateHandler extends Handlers {
-    public static string | null $uri = '/{id}';
+class UpdateHandler extends Handlers
+{
+    public static string | null $uri = '/{rm}';
     public static string | null $resource = PendaftaranResource::class;
 
     public static function getMethod()
@@ -15,7 +17,8 @@ class UpdateHandler extends Handlers {
         return Handlers::PUT;
     }
 
-    public static function getModel() {
+    public static function getModel()
+    {
         return static::$resource::getModel();
     }
 
@@ -28,9 +31,9 @@ class UpdateHandler extends Handlers {
      */
     public function handler(UpdatePendaftaranRequest $request)
     {
-        $id = $request->route('id');
+        $rm = $request->route('rm');
 
-        $model = static::getModel()::find($id);
+        $model = static::getModel()::find($rm);
 
         if (!$model) return static::sendNotFoundResponse();
 

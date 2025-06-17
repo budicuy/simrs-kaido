@@ -11,7 +11,7 @@ use App\Filament\Resources\PendaftaranResource\Api\Transformers\PendaftaranTrans
 
 class DetailHandler extends Handlers
 {
-    public static string | null $uri = '/{id}';
+    public static string | null $uri = '/{rm}';
     public static string | null $resource = PendaftaranResource::class;
 
 
@@ -23,12 +23,12 @@ class DetailHandler extends Handlers
      */
     public function handler(Request $request)
     {
-        $id = $request->route('id');
-        
+        $rm = $request->route('rm');
+
         $query = static::getEloquentQuery();
 
         $query = QueryBuilder::for(
-            $query->where(static::getKeyName(), $id)
+            $query->where(static::getKeyName(), $rm)
         )
             ->first();
 

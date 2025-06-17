@@ -1,11 +1,13 @@
 <?php
+
 namespace App\Filament\Resources\PasiensResource\Api\Handlers;
 
 use Illuminate\Http\Request;
 use Rupadana\ApiService\Http\Handlers;
 use App\Filament\Resources\PasiensResource;
 
-class DeleteHandler extends Handlers {
+class DeleteHandler extends Handlers
+{
     public static string | null $uri = '/{id}';
     public static string | null $resource = PasiensResource::class;
 
@@ -14,7 +16,8 @@ class DeleteHandler extends Handlers {
         return Handlers::DELETE;
     }
 
-    public static function getModel() {
+    public static function getModel()
+    {
         return static::$resource::getModel();
     }
 
@@ -26,9 +29,9 @@ class DeleteHandler extends Handlers {
      */
     public function handler(Request $request)
     {
-        $id = $request->route('id');
+        $rm = $request->route('rm');
 
-        $model = static::getModel()::find($id);
+        $model = static::getModel()::find($rm);
 
         if (!$model) return static::sendNotFoundResponse();
 

@@ -23,12 +23,12 @@ class DetailHandler extends Handlers
      */
     public function handler(Request $request)
     {
-        $id = $request->route('id');
-        
+        $rm = $request->route('rm');
+
         $query = static::getEloquentQuery();
 
         $query = QueryBuilder::for(
-            $query->where(static::getKeyName(), $id)
+            $query->where(static::getKeyName(), $rm)
         )
             ->first();
 

@@ -1,12 +1,14 @@
 <?php
+
 namespace App\Filament\Resources\PendaftaranResource\Api\Handlers;
 
 use Illuminate\Http\Request;
 use Rupadana\ApiService\Http\Handlers;
 use App\Filament\Resources\PendaftaranResource;
 
-class DeleteHandler extends Handlers {
-    public static string | null $uri = '/{id}';
+class DeleteHandler extends Handlers
+{
+    public static string | null $uri = '/{rm}';
     public static string | null $resource = PendaftaranResource::class;
 
     public static function getMethod()
@@ -14,7 +16,8 @@ class DeleteHandler extends Handlers {
         return Handlers::DELETE;
     }
 
-    public static function getModel() {
+    public static function getModel()
+    {
         return static::$resource::getModel();
     }
 
@@ -26,9 +29,9 @@ class DeleteHandler extends Handlers {
      */
     public function handler(Request $request)
     {
-        $id = $request->route('id');
+        $rm = $request->route('rm');
 
-        $model = static::getModel()::find($id);
+        $model = static::getModel()::find($rm);
 
         if (!$model) return static::sendNotFoundResponse();
 
