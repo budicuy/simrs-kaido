@@ -31,16 +31,32 @@ class UpdateHandler extends Handlers
      */
     public function handler(UpdatePendaftaranRequest $request)
     {
-        $rm = $request->route('rm');
+        try {
+            $rm = $request->route('rm');
 
-        $model = static::getModel()::find($rm);
+            $model = static::getModel()::where('rm', $rm)->first();
 
-        if (!$model) return static::sendNotFoundResponse();
+            if (!$model) return static::sendNotFoundResponse();
+            
+            // Log request data for debugging
+            \Log::info('Pendaftaran Update Request Data:', $request->all());
 
-        $model->fill($request->all());
+            $model->fill($request->validated());
 
-        $model->save();
+            $model->save();
 
-        return static::sendSuccessResponse($model, "Successfully Update Resource");
+            return static::sendSuccessResponse($model, "Successfully Update Resource");
+        } catch (\Exception $e) {
+            \Log::error('Error updating pendaftaran:', [
+                'message' => $e->getMessage(),
+                'request_data' => $request->all(),
+                'rm' => $request->route('rm')
+            ]);
+            
+            return response()->json([
+                'message' => 'Terjadi kesalahan saat mengupdate pendaftaran',
+                'error' => $e->getMessage()
+            ], 500);
+        }
     }
 }

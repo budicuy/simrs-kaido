@@ -28,7 +28,7 @@ class DetailHandler extends Handlers
         $query = static::getEloquentQuery();
 
         $query = QueryBuilder::for(
-            $query->where(static::getKeyName(), $rm)
+            $query->where('rm', $rm)
         )
             ->first();
 
