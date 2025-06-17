@@ -12,12 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('pendaftarans', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedInteger('rm', false, true);
-            $table->unsignedBigInteger('id_poli', false, true);
+            $table->unsignedInteger('rm')->unique()->primary();
+            $table->unsignedBigInteger('id_poli');
             $table->dateTime('tgl_kunjungan');
             $table->smallInteger('no_antrian');
-            $table->char('status', 10); // 0 = Menggunggu, 1 = Dipanggil, 2 = diperika 3 = Selesai           
+            $table->char('status', 10); // 0 = Menggunggu, 1 = Dipanggil, 2 = diperika 3 = Selesai
             $table->timestamps();
         });
         // Foreign key constraints (assuming table 'polis' exists)
