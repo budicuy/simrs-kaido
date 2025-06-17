@@ -112,9 +112,9 @@
                     // Pastikan userRole bertipe string untuk perbandingan yang konsisten
                     const roleStr = String(userRole);
                     if (roleStr === 'admin') {
-                        window.location.href = '/'; // Admin
+                        window.location.href = '/login'; // Admin
                     } else if (roleStr === 'super_admin' || roleStr === '1') {
-                        window.location.href = '/'; // Admin pendaftaran
+                        window.location.href = '/login'; // Admin pendaftaran
                     } else if (roleStr === '3') {
                         window.location.href = 'https://ti054a02.agussbn.my.id'; // Dokter
                     } else if (roleStr === '4') {
