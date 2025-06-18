@@ -112,20 +112,20 @@
                     // Pastikan userRole bertipe string untuk perbandingan yang konsisten
                     const roleStr = String(userRole);
                     if (roleStr === 'admin') {
-                        window.location.href = '/login'; // Admin
+                        window.location.href = '/dashboard'; // Admin
                     } else if (roleStr === 'super_admin' || roleStr === '1') {
                         window.location.href = '/login'; // Admin pendaftaran
-                    } else if (roleStr === '3') {
+                    } else if (roleStr === 'Dokter') {
                         window.location.href = 'https://ti054a02.agussbn.my.id'; // Dokter
-                    } else if (roleStr === '4') {
+                    } else if (roleStr === 'Perawat') {
                         window.location.href = 'https://ti054a02.agussbn.my.id'; // Perawat
-                    } else if (roleStr === '5') {
+                    } else if (roleStr === 'kasir' || roleStr === '5') {
                         window.location.href = 'https://ti054a03.agussbn.my.id'; // Petugas Kasir
-                    } else if (roleStr === '6') {
+                    } else if (roleStr === 'Admin Kasir' || roleStr === '3') {
                         window.location.href = 'https://ti054a03.agussbn.my.id'; // Admin Kasir
-                    } else if (roleStr === '7') {
+                    } else if (roleStr === 'Petugas Apotik') {
                         window.location.href = 'https://ti054a04.agussbn.my.id'; // Petugas Apotik
-                    } else if (roleStr === '8') {
+                    } else if (roleStr === 'Admin Apotik') {
                         window.location.href = 'https://ti054a04.agussbn.my.id'; // Admin Apotik
                     } else {
                         showMessage('Role pengguna tidak dikenali. Silakan hubungi admin.', 'error');
