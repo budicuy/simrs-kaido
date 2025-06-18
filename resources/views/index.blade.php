@@ -114,7 +114,7 @@
                     if (roleStr === 'admin') {
                         window.location.href = '/dashboard'; // Admin
                     } else if (roleStr === 'super_admin' || roleStr === '1') {
-                        window.location.href = '/login'; // Admin pendaftaran
+                        window.location.href = '/dashboard'; // Admin pendaftaran
                     } else if (roleStr === 'Dokter') {
                         window.location.href = 'https://ti054a02.agussbn.my.id'; // Dokter
                     } else if (roleStr === 'Perawat') {
