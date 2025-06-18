@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Rumah Sakit Islam Banjarmasin</title>
-    <link rel="stylesheet" href="style/login.css">
-    <link rel="icon" href="/image/logo_rs.png" type="image/png">
+    <link rel="stylesheet" href="{{ asset('css/style/login.css') }}">
+    <link rel="icon" href="{{ asset('image/logo_rs.png') }}" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
 
@@ -16,7 +16,7 @@
 <body>
     <header>
         <div class="header-container">
-            <img src="/image/logo_rs.png" alt="Logo Rumah Sakit" class="logo">
+            <img src="{{ asset('image/logo_rs.png') }}" alt="Logo Rumah Sakit" class="logo">
             <h1>RUMAH SAKIT ISLAM BANJARMASIN</h1>
         </div>
     </header>
@@ -27,13 +27,13 @@
             <form id="loginForm">
                 <label for="email">Email</label>
                 <div class="input-group">
-                    <img src="/image/profile.png" alt="icon Profile" class="icon">
+                    <img src="{{ asset('image/profile.png') }}" alt="icon Profile" class="icon">
                     <input type="email" id="email" placeholder="Masukkan Email Anda" required>
                 </div>
 
                 <label for="password">Kata Sandi</label>
                 <div class="input-group">
-                    <img src="/image/key.png" alt="Icon Sandi" class="icon">
+                    <img src="{{ asset('image/key.png') }}" alt="Icon Sandi" class="icon">
                     <input type="password" id="password" placeholder="Masukkan Kata Sandi Anda" required>
                 </div>
 
