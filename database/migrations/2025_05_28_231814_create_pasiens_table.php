@@ -12,18 +12,18 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('pasiens', function (Blueprint $table) {
-            $table->unsignedInteger('rm')->primary();
+            $table->unsignedInteger('rm')->unique();
             $table->unsignedBigInteger('nik')->unique();
-            $table->string('nama_pasien', 100);
+            $table->string('nama_pasien');
             $table->date('tgl_lahir');
-            $table->char('agama');
-            $table->char('kabupaten');
-            $table->string('pekerjaan', 50);
-            $table->enum('jns_kelamin', ['pria', 'perempuan']);
-            $table->string('alamat', 100);
-            $table->char('no_hp_pasien', 15);
-            $table->string('email_pasien', 20);
-            $table->char('gol_darah', 3);
+            $table->string('agama');
+            $table->string('kabupaten');
+            $table->string('pekerjaan');
+            $table->string('jns_kelamin');
+            $table->string('alamat');
+            $table->string('no_hp_pasien');
+            $table->string('email_pasien');
+            $table->string('gol_darah');
             $table->timestamps();
         });
     }

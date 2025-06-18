@@ -26,7 +26,7 @@ class PasiensResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('rm')
-                ->label('Rekam Medis')
+                    ->label('Rekam Medis')
                     ->required()
                     ->numeric(),
                 Forms\Components\TextInput::make('nik')
@@ -44,7 +44,7 @@ class PasiensResource extends Resource
                     ->required()
                     ->maxDate(now()),
                 Forms\Components\Select::make('agama')
-                ->label('Agama')
+                    ->label('Agama')
                     ->required()
                     ->options([
                         'Islam' => 'Islam',
@@ -82,8 +82,8 @@ class PasiensResource extends Resource
                     ->label('Jenis Kelamin')
                     ->required()
                     ->options([
-                        'pria' => 'Laki-Laki',
-                        'perempuan' => 'Perempuan',
+                        'Laki-Laki' => 'Laki-Laki',
+                        'Perempuan' => 'Perempuan',
                     ]),
                 Forms\Components\TextInput::make('alamat')
                     ->label('Alamat')
@@ -108,7 +108,7 @@ class PasiensResource extends Resource
                         'B' => 'B',
                         'AB' => 'AB',
                         'O' => 'O',
-                        '-' => 'Tidak diketahui',                        
+                        '-' => 'Tidak diketahui',
                     ]),
             ]);
     }
@@ -143,7 +143,7 @@ class PasiensResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('jns_kelamin')
                     ->label('Jenis Kelamin')
-                    ->formatStateUsing(fn ($state) => $state === 'pria' ? 'Laki-Laki' : ($state === 'perempuan' ? 'Perempuan' : $state))
+                    ->formatStateUsing(fn($state) => $state === 'pria' ? 'Laki-Laki' : ($state === 'perempuan' ? 'Perempuan' : $state))
                     ->searchable(),
                 Tables\Columns\TextColumn::make('alamat')
                     ->label('Alamat')
@@ -171,7 +171,7 @@ class PasiensResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-   Tables\Actions\DeleteAction::make(),
+                Tables\Actions\DeleteAction::make(),
 
             ])
             ->bulkActions([

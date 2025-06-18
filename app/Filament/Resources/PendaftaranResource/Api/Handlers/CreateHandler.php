@@ -27,12 +27,27 @@ class CreateHandler extends Handlers {
      */
     public function handler(CreatePendaftaranRequest $request)
     {
-        $model = new (static::getModel());
+        try {
+            $model = new (static::getModel());
+            
+            // Log request data for debugging
+            \Log::info('Pendaftaran Create Request Data:', $request->all());
+            
+            $model->fill($request->validated());
 
-        $model->fill($request->all());
+            $model->save();
 
-        $model->save();
-
-        return static::sendSuccessResponse($model, "Successfully Create Resource");
+            return static::sendSuccessResponse($model, "Successfully Create Resource");
+        } catch (\Exception $e) {
+            \Log::error('Error creating pendaftaran:', [
+                'message' => $e->getMessage(),
+                'request_data' => $request->all()
+            ]);
+            
+            return response()->json([
+                'message' => 'Terjadi kesalahan saat membuat pendaftaran',
+                'error' => $e->getMessage()
+            ], 500);
+        }
     }
 }
