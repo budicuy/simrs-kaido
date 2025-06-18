@@ -24,7 +24,7 @@
 <body>
     <div class="sidebar">
         <div class="logo-details">
-            <img src="{{ asset('image/logo.svg') }}" alt="User" class="profile-icon">
+            <img src="{{ asset('image/logo.svg') }}" alt="User" class="logo-icon">
             <span class="logo_name">
                 <h5>RUMAH SAKIT ISLAM<br>BANJARMASIN</h5>
             </span>
@@ -32,18 +32,18 @@
         <ul class="nav-links">
             <li>
                 <a href="{{ route('dashboard') }}" class="active">
-                    <img src="{{ asset('image/beranda.svg') }}" alt="User" class="profile-icon">
+                    <img src="{{ asset('image/beranda.svg') }}" alt="User">
                     <span class="link_name">Beranda</span>
                 </a>
                 <ul class="sub-menu blank">
                     <li><a href="{{ route('dashboard') }}" class="active">
-                    <img src="{{ asset('image/beranda.svg') }}" alt="User" class="profile-icon">Beranda</a></li>
+                    <img src="{{ asset('image/beranda.svg') }}" alt="User">Beranda</a></li>
                 </ul>
             </li>
             <li>
                 <div class="icon-link">
                     <a href="{{ route('pendaftaran') }}">
-                        <img src="{{ asset('image/kunjungan.svg') }}" alt="User" class="profile-icon">
+                        <img src="{{ asset('image/kunjungan.svg') }}" alt="User">
                         <span class="link_name">Pendaftaran</span>
                     </a>
                     <i class="bx bx-chevron-down arrow"></i>
@@ -56,7 +56,7 @@
             </li>
             <li>
                 <a href="{{ route('pasien') }}">
-                    <img src="{{ asset('image/pasien.svg') }}" alt="User" class="profile-icon">
+                    <img src="{{ asset('image/pasien.svg') }}" alt="User">
                     <span class="link_name">Pasien</span>
                 </a>
                 <ul class="sub-menu blank">
@@ -66,7 +66,7 @@
             <li>
                 <div class="icon-link">
                     <a href="{{ route('poli') }}">
-                        <img src="{{ asset('image/kunjungan.svg') }}" alt="User" class="profile-icon">
+                        <img src="{{ asset('image/kunjungan.svg') }}" alt="User">
                         <span class="link_name">Layanan</span>
                     </a>
                     <i class="bx bx-chevron-down arrow"></i>
@@ -81,7 +81,7 @@
 
             <li class="logout">
                 <a href="#" id="logoutButton" class="keluar">
-                    <img src="{{ asset('image/keluar.svg') }}" alt="User" class="profile-icon">
+                    <img src="{{ asset('image/keluar.svg') }}" alt="User">
                     <span class="link_name">Keluar</span>
                 </a>
                 <ul class="sub-menu blank">
@@ -127,57 +127,57 @@
         <div class="cards-2">
             <div class="card-2">
                 <div class="icon-case">
-                    <img src="{{ asset('image/icon-total-kunjungan.png') }}" alt="User" class="profile-icon">
+                    <img src="{{ asset('image/icon-total-kunjungan.png') }}" alt="User">
                 </div>
                 <div class="box-2">
                     <h4>Pendaftaran</h4>
                     <h4 class="jumlah" id="pendaftaranCount">0</h4> </div>
                 <div class="arrow">
-                    <a href="{{ route('pendaftaran') }}"><img src="{{ asset('image/arrow-right.svg') }}" alt="User" class="profile-icon"></a>
+                    <a href="{{ route('pendaftaran') }}"><img src="{{ asset('image/arrow-right.svg') }}" alt="User"></a>
                 </div>
             </div>
             <div class="card-2">
                 <div class="icon-case">
-                    <img src="{{ asset('image/icon-pasien.png') }}" alt="User" class="profile-icon">
+                    <img src="{{ asset('image/icon-pasien.png') }}" alt="User">
                 </div>
                 <div class="box-2">
                     <h4>Pasien</h4>
                     <h4 class="jumlah" id="pasienCount">0</h4> </div>
                 <div class="arrow">
-                    <a href="{{ route('pasien') }}"><img src="{{ asset('image/arrow-right.svg') }}" alt="User" class="profile-icon"></a>
+                    <a href="{{ route('pasien') }}"><img src="{{ asset('image/arrow-right.svg') }}" alt="User"></a>
                 </div>
             </div>
             <div class="card-2">
                 <div class="icon-case">
-                    <img src="{{ asset('image/icon_poli.png') }}" alt="User" class="profile-icon">
+                    <img src="{{ asset('image/icon_poli.png') }}" alt="User">
                 </div>
                 <div class="box-2">
                     <h4>Poli</h4>
                     <h4 class="jumlah" id="poliCount">0</h4> </div>
                 <div class="arrow">
-                    <a href="{{ route('poli') }}"><img src="{{ asset('image/arrow-right.svg') }}" alt="User" class="profile-icon"></a>
+                    <a href="{{ route('poli') }}"><img src="{{ asset('image/arrow-right.svg') }}" alt="User"></a>
                 </div>
             </div>
             <div class="card-2">
                 <div class="icon-case">
-                    <img src="{{ asset('image/icon_dokter.png') }}" alt="User" class="profile-icon">
+                    <img src="{{ asset('image/icon_dokter.png') }}" alt="User">
                 </div>
                 <div class="box-2">
                     <h4>Dokter</h4>
                     <h4 class="jumlah" id="dokterCount">0</h4> </div>
                 <div class="arrow">
-                    <a href="{{ route('dokter') }}"><img src="{{ asset('image/arrow-right.svg') }}" alt="User" class="profile-icon"></a>
+                    <a href="{{ route('dokter') }}"><img src="{{ asset('image/arrow-right.svg') }}" alt="User"></a>
                 </div>
             </div>
             <div class="card-2">
                 <div class="icon-case">
-                    <img src="{{ asset('image/icon_dokter.png') }}" alt="User" class="profile-icon">
+                    <img src="{{ asset('image/icon_dokter.png') }}" alt="User">
                 </div>
                 <div class="box-2">
                     <h4>Perawat</h4>
                     <h4 class="jumlah" id="perawatCount">0</h4> </div>
                 <div class="arrow">
-                    <a href="{{ route('perawat') }}"><img src="{{ asset('image/arrow-right.svg') }}" alt="User" class="profile-icon"></a>
+                    <a href="{{ route('perawat') }}"><img src="{{ asset('image/arrow-right.svg') }}" alt="User"></a>
                 </div>
             </div>
         </div>
