@@ -29,21 +29,85 @@
 
 <body>
     <div class="sidebar">
-        <div class="logo-details"><img src="{{ asset('image/logo.svg') }}" alt="Logo RS"><span class="logo_name"><h5>RUMAH SAKIT ISLAM<br>BANJARMASIN</h5></span></div>
+        <div class="logo-details">
+            <img src="{{ asset('image/logo.svg') }}" alt="Logo RS">
+            <span class="logo_name">
+                <h5>RUMAH SAKIT ISLAM<br>BANJARMASIN</h5>
+            </span>
+        </div>
         <ul class="nav-links">
-            <li><a href="{{ route('dashboard') }}"><img src="{{ asset('image/logo.svg') }}" alt="Logo RS"><span class="logo_name"><h5>RUMAH SAKIT ISLAM<br>BANJARMASIN</h5></span></div>beranda.svg" alt="Beranda"><span class="link_name">Beranda</span></a><ul class="sub-menu blank"><li><a href="{{ route('dashboard') }}" class="link_name">Beranda</a></li></ul></li>
-            <li><div class="icon-link"><a href="{{ route('pendaftaran') }}"><img src="{{ asset('image/logo.svg') }}" alt="Logo RS"><span class="logo_name"><h5>RUMAH SAKIT ISLAM<br>BANJARMASIN</h5></span></div>kunjungan.svg" alt="Kunjungan"><span class="link_name">Pendaftaran</span></a><i class="bx bx-chevron-down arrow"></i></div><ul class="sub-menu"><li><a href="#" class="link_name">Pendaftaran</a></li><li><a href="{{ route('pendaftaran') }}">Pendaftaran Hari Ini</a></li><li><a href="{{ route('pendaftaran.riwayat') }}">Riwayat Pendaftaran</a></li></ul></li>
-            <li><a href="{{ route('pasien') }}"><img src="{{ asset('image/logo.svg') }}" alt="Logo RS"><span class="logo_name"><h5>RUMAH SAKIT ISLAM<br>BANJARMASIN</h5></span></div>pasien.svg" alt="Pasien"><span class="link_name">Pasien</span></a><ul class="sub-menu blank"><li><a href="{{ route('pasien') }}" class="link_name">Pasien</a></li></ul></li>
-            <li><div class="icon-link"><a href="{{ route('poli') }}"><img src="{{ asset('image/logo.svg') }}" alt="Logo RS"><span class="logo_name"><h5>RUMAH SAKIT ISLAM<br>BANJARMASIN</h5></span></div>kunjungan.svg" alt="Layanan"><span class="link_name">Layanan</span></a><i class="bx bx-chevron-down arrow"></i></div><ul class="sub-menu"><li><a href="#" class="link_name">Layanan</a></li><li><a href="{{ route('poli') }}">Poli</a></li><li><a href="{{ route('dokter') }}">Dokter</a></li><li><a href="{{ route('perawat') }}">Perawat</a></li></ul></li>
-            <li class="logout"><a href="#" id="logoutButton" class="keluar"><img src="{{ asset('image/logo.svg') }}" alt="Logo RS"><span class="logo_name"><h5>RUMAH SAKIT ISLAM<br>BANJARMASIN</h5></span></div>keluar.svg" alt="Keluar"><span class="link_name">Keluar</span></a><ul class="sub-menu blank"><li><a href="#" class="link_name">Keluar</a></li></ul></li>
+            <li>
+                <a href="{{ route('dashboard') }}">
+                    <img src="{{ asset('image/beranda.svg') }}" alt="Beranda">
+                    <span class="link_name">Beranda</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a href="{{ route('dashboard') }}" class="link_name">Beranda</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="{{ route('pendaftaran') }}">
+                        <img src="{{ asset('image/kunjungan.svg') }}" alt="Kunjungan">
+                        <span class="link_name">Pendaftaran</span>
+                    </a>
+                    <i class="bx bx-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a href="#" class="link_name">Pendaftaran</a></li>
+                    <li><a href="{{ route('pendaftaran') }}">Pendaftaran Hari Ini</a></li>
+                    <li><a href="{{ route('pendaftaran.riwayat') }}">Riwayat Pendaftaran</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="{{ route('pasien') }}">
+                    <img src="{{ asset('image/pasien.svg') }}" alt="Pasien">
+                    <span class="link_name">Pasien</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a href="{{ route('pasien') }}" class="link_name">Pasien</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-link active">
+                    <a href="{{ route('poli') }}">
+                        <img src="{{ asset('image/kunjungan.svg') }}" alt="Layanan">
+                        <span class="link_name">Layanan</span>
+                    </a>
+                    <i class="bx bx-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a href="#" class="link_name">Layanan</a></li>
+                    <li><a href="{{ route('poli') }}">Poli</a></li>
+                    <li><a href="{{ route('dokter') }}">Dokter</a></li>
+                    <li><a href="{{ route('perawat') }}">Perawat</a></li>
+                </ul>
+            </li>
+            <li class="logout">
+                <a href="#" id="logoutButton" class="keluar">
+                    <img src="{{ asset('image/keluar.svg') }}" alt="Keluar">
+                    <span class="link_name">Keluar</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a href="#" class="link_name">Keluar</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 
     <section class="home-section">
         <div class="home-content">
             <i class="bx bx-menu"></i>
-            <div class="profile-trigger" onclick="toggleProfilePopup()"><img src="{{ asset('image/logo.svg') }}" alt="Logo RS"><span class="logo_name"><h5>RUMAH SAKIT ISLAM<br>BANJARMASIN</h5></span></div>admin.svg" alt="User" class="profile-icon"></div>
-            <div id="profile-popup" class="profile-popup hidden"><div class="popup-content"><img src="{{ asset('image/logo.svg') }}" alt="Logo RS"><span class="logo_name"><h5>RUMAH SAKIT ISLAM<br>BANJARMASIN</h5></span></div>admin.svg" alt="User" class="popup-icon"><div><div class="popup-name" id="userNameDisplay">Memuat...</div><div class="popup-role" id="userRoleDisplay">Memuat...</div></div></div></div>
+            <div class="profile-trigger" onclick="toggleProfilePopup()"><img src="{{ asset('image/admin.svg') }}" alt="Logo RS"><span class="logo_name"><h5>RUMAH SAKIT ISLAM<br>BANJARMASIN</h5></span></div>
+<div id="profile-popup" class="profile-popup hidden">
+                <div class="popup-content">
+                    <img src="{{ asset('image/admin.svg') }}" alt="User" class="popup-icon">
+                    <div>
+                        <div class="popup-name" id="userNameDisplay">Memuat...</div>
+                        <div class="popup-role" id="userRoleDisplay">Memuat...</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -60,7 +124,7 @@
                     <input type="text" id="searchInput" placeholder="Cari berdasarkan Nama, NIK, atau RM" />
                     <button class="search-btn" id="searchButton"><i class="bx bx-search"></i></button>
                 </div>
-                <button class="filter-btn" style="display: none;"><img src="{{ asset('image/logo.svg') }}" alt="Logo RS"><span class="logo_name"><h5>RUMAH SAKIT ISLAM<br>BANJARMASIN</h5></span></div>Input.svg" alt=""></button>
+                <button class="filter-btn" style="display: none;"><img src="{{ asset('image/Input.svg') }}" alt="Logo RS"><span class="logo_name"><h5>RUMAH SAKIT ISLAM<br>BANJARMASIN</h5></span></button>
             </div>
             <div id="loadingMessage" class="loading-message">Memuat data pasien...</div>
             <div id="errorMessage" class="error-message" style="display: none;"></div>

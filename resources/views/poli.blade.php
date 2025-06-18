@@ -43,11 +43,62 @@
             </span>
         </div>
         <ul class="nav-links">
-            <li><a href="{{ route('dashboard') }}"><img src="{{ asset('image/logo.svg') }}" alt="Logo RS">/beranda.svg" alt="Beranda"><span class="link_name">Beranda</span></a><ul class="sub-menu blank"><li><a href="{{ route('dashboard') }}" class="link_name">Beranda</a></li></ul></li>
-            <li><div class="icon-link"><a href="{{ route('pendaftaran') }}"><img src="{{ asset('image/logo.svg') }}" alt="Logo RS">image/kunjungan.svg" alt="Kunjungan"><span class="link_name">Pendaftaran</span></a><i class="bx bx-chevron-down arrow"></i></div><ul class="sub-menu"><li><a href="#" class="link_name">Pendaftaran</a></li><li><a href="{{ route('pendaftaran') }}">Pendaftaran Hari Ini</a></li><li><a href="{{ route('pendaftaran.riwayat') }}">Riwayat Pendaftaran</a></li></ul></li>
-            <li><a href="{{ route('pasien') }}"><img src="{{ asset('image/logo.svg') }}" alt="Logo RS">image/pasien.svg" alt="Pasien"><span class="link_name">Pasien</span></a><ul class="sub-menu blank"><li><a href="{{ route('pasien') }}" class="link_name">Pasien</a></li></ul></li>
-            <li><div class="icon-link active"><a href="{{ route('poli') }}"><img src="{{ asset('image/logo.svg') }}" alt="Logo RS">mage/kunjungan.svg" alt="Layanan"><span class="link_name">Layanan</span></a><i class="bx bx-chevron-down arrow"></i></div><ul class="sub-menu"><li><a href="#" class="link_name">Layanan</a></li><li><a href="{{ route('poli') }}">Poli</a></li><li><a href="{{ route('dokter') }}">Dokter</a></li><li><a href="{{ route('perawat') }}">Perawat</a></li></ul></li>
-            <li class="logout"><a href="#" id="logoutButton" class="keluar"><img src="{{ asset('image/logo.svg') }}" alt="Logo RS">image/keluar.svg" alt="Keluar"><span class="link_name">Keluar</span></a><ul class="sub-menu blank"><li><a href="#" class="link_name">Keluar</a></li></ul></li>
+            <li>
+                <a href="{{ route('dashboard') }}">
+                    <img src="{{ asset('image/beranda.svg') }}" alt="Beranda">
+                    <span class="link_name">Beranda</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a href="{{ route('dashboard') }}" class="link_name">Beranda</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="{{ route('pendaftaran') }}">
+                        <img src="{{ asset('image/kunjungan.svg') }}" alt="Kunjungan">
+                        <span class="link_name">Pendaftaran</span>
+                    </a>
+                    <i class="bx bx-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a href="#" class="link_name">Pendaftaran</a></li>
+                    <li><a href="{{ route('pendaftaran') }}">Pendaftaran Hari Ini</a></li>
+                    <li><a href="{{ route('pendaftaran.riwayat') }}">Riwayat Pendaftaran</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="{{ route('pasien') }}">
+                    <img src="{{ asset('image/pasien.svg') }}" alt="Pasien">
+                    <span class="link_name">Pasien</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a href="{{ route('pasien') }}" class="link_name">Pasien</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-link active">
+                    <a href="{{ route('poli') }}">
+                        <img src="{{ asset('image/kunjungan.svg') }}" alt="Layanan">
+                        <span class="link_name">Layanan</span>
+                    </a>
+                    <i class="bx bx-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a href="#" class="link_name">Layanan</a></li>
+                    <li><a href="{{ route('poli') }}">Poli</a></li>
+                    <li><a href="{{ route('dokter') }}">Dokter</a></li>
+                    <li><a href="{{ route('perawat') }}">Perawat</a></li>
+                </ul>
+            </li>
+            <li class="logout">
+                <a href="#" id="logoutButton" class="keluar">
+                    <img src="{{ asset('image/keluar.svg') }}" alt="Keluar">
+                    <span class="link_name">Keluar</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a href="#" class="link_name">Keluar</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 
@@ -55,11 +106,11 @@
         <div class="home-content">
             <i class="bx bx-menu"></i>
             <div class="profile-trigger" onclick="toggleProfilePopup()">
-                <img src="{{ asset('image/logo.svg') }}" alt="Logo RS">admin.svg" alt="User" class="profile-icon">
+                <img src="{{ asset('image/admin.svg') }}" alt="Logo RS" class="profile-icon">
             </div>
             <div id="profile-popup" class="profile-popup hidden">
                 <div class="popup-content">
-                    <img src="{{ asset('image/logo.svg') }}" alt="Logo RS">admin.svg" alt="User" class="popup-icon">
+                    <img src="{{ asset('image/admin.svg') }}" alt="admin" class="popup-icon">
                     <div>
                         <div class="popup-name" id="userNameDisplay">Memuat...</div>
                         <div class="popup-role" id="userRoleDisplay">Memuat...</div>
@@ -85,7 +136,7 @@
                         <button class="search-btn" id="searchButton"><i class="bx bx-search"></i></button>
                     </div>
                 </div>
-                <button class="filter-btn" style="display: none;"><img src="{{ asset('image/logo.svg') }}" alt="Logo RS">image/Input.svg" alt=""></button>
+                <button class="filter-btn" style="display: none;"><img src="{{ asset('image/Input.svg') }}" alt="Logo RS"></button>
             </div>
 
             <div class="table-container">
@@ -105,7 +156,7 @@
             <div id="noDataMessage" class="info-message" style="display: none;">Tidak ada data poli.</div>
             <div class="pagination-wrapper" style="display: none;">
                 <div class="pagination-center">Halaman 1/1</div>
-                <a href="#" class="pagination-next"><img src="{{ asset('image/logo.svg') }}" alt="Logo RS">image/hal-lanjut.svg" alt=""></a>
+                <a href="#" class="pagination-next"><img src="{{ asset('image/hal-lanjut.svg') }}" alt="Logo RS"></a>
             </div>
         </div>
     </main>
