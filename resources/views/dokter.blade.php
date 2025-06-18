@@ -140,7 +140,7 @@
         <ul class="nav-links">
             <li>
                 <a href="{{ route('dashboard') }}">
-                    <img src="{{ asset('image/logo.svg') }}" alt="Logo RS">beranda.svg" alt="Beranda">
+                    <img src="{{ asset('image/beranda.svg') }}" alt="Beranda">
                     <span class="link_name">Beranda</span>
                 </a>
                 <ul class="sub-menu blank">
@@ -150,7 +150,7 @@
             <li>
                 <div class="icon-link">
                     <a href="{{ route('pendaftaran') }}">
-                        <img src="{{ asset('image/logo.svg') }}" alt="Logo RS">kunjungan.svg" alt="Kunjungan">
+                        <img src="{{ asset('image/kunjungan.svg') }}" alt="Kunjungan">
                         <span class="link_name">Pendaftaran</span>
                     </a>
                     <i class="bx bx-chevron-down arrow"></i>
@@ -163,7 +163,7 @@
             </li>
             <li>
                 <a href="{{ route('pasien') }}">
-                    <img src="{{ asset('image/logo.svg') }}" alt="Logo RS">pasien.svg" alt="Pasien">
+                    <img src="{{ asset('image/pasien.svg') }}" alt="Pasien">
                     <span class="link_name">Pasien</span>
                 </a>
                 <ul class="sub-menu blank">
@@ -173,7 +173,7 @@
             <li>
                 <div class="icon-link active">
                     <a href="{{ route('poli') }}">
-                        <img src="{{ asset('image/logo.svg') }}" alt="Logo RS">kunjungan.svg" alt="Layanan">
+                        <img src="{{ asset('image/kunjungan.svg') }}" alt="Layanan">
                         <span class="link_name">Layanan</span>
                     </a>
                     <i class="bx bx-chevron-down arrow"></i>
@@ -201,12 +201,12 @@
         <div class="home-content">
             <i class="bx bx-menu"></i>
             <div class="profile-trigger" onclick="toggleProfilePopup()">
-                <img src="{{ asset('image/logo.svg') }}" alt="Logo RS">admin.svg" alt="User" class="profile-icon">
+                <img src="{{ asset('image/admin.svg') }}" alt="Logo RS">
             </div>
 
             <div id="profile-popup" class="profile-popup hidden">
                 <div class="popup-content">
-                    <img src="{{ asset('image/logo.svg') }}" alt="Logo RS">admin.svg" alt="User" class="popup-icon">
+                    <img src="{{ asset('image/logo.svg') }}" alt="Logo RS">
                     <div>
                         <div class="popup-name" id="userNameDisplay">Memuat...</div>
                         <div class="popup-role" id="userRoleDisplay">Memuat...</div>
@@ -234,7 +234,7 @@
                         <button class="search-btn" id="searchButton"><i class="bx bx-search"></i></button>
                     </div>
                 </div>
-                <button class="filter-btn" style="display: none;"><img src="{{ asset('image/logo.svg') }}" alt="Logo RS">image/Input.svg" alt=""></button>
+                <button class="filter-btn" style="display: none;"><img src="{{ asset('image/Input.svg') }}" alt=""></button>
             </div>
 
 
@@ -258,7 +258,7 @@
 
             <div class="pagination-wrapper" style="display: none;">
                 <div class="pagination-center">Halaman 1/1</div>
-                <a href="#" class="pagination-next"><img src="{{ asset('image/logo.svg') }}" alt="Logo RS">image/hal-lanjut.svg" alt=""></a>
+                <a href="#" class="pagination-next"><img src="{{ asset('image/hal-lanjut.svg') }}" alt=""></a>
             </div>
         </div>
     </main>
