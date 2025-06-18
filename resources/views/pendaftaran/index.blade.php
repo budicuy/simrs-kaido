@@ -277,9 +277,9 @@
                     <td>${p.dokter || 'N/A'}</td> <td>${p.no_antrian}</td>
                     <td class="${statusClass}">${p.status || 'N/A'}</td>
                     <td class="aksi">
-                        <img src="{{ asset('image/logo.svg') }}" alt="Logo RS"><span class="logo_name"><h5>RUMAH SAKIT ISLAM<br>BANJARMASIN</h5></span></div>call.png" alt="Panggil" title="Panggil Pasien" onclick="updateStatus(${p.id}, 2)">
-                        <img src="{{ asset('image/logo.svg') }}" alt="Logo RS"><span class="logo_name"><h5>RUMAH SAKIT ISLAM<br>BANJARMASIN</h5></span></div>check.png" alt="Selesai" title="Tandai Selesai" onclick="updateStatus(${p.id}, 3)">
-                        <img src="{{ asset('image/logo.svg') }}" alt="Logo RS"><span class="logo_name"><h5>RUMAH SAKIT ISLAM<br>BANJARMASIN</h5></span></div>eye.svg" alt="Detail" title="Lihat Detail" onclick="openDetailModal(${p.id})">
+                        <img src="{{ asset('image/call.png') }}" title="Panggil Pasien" onclick="updateStatus(${p.id}, 2)">
+                        <img src="{{ asset('image/centang.svg') }}" title="Tandai Selesai" onclick="updateStatus(${p.id}, 3)">
+                        <img src="{{ asset('image/eye.svg') }}" title="Lihat Detail" onclick="openDetailModal(${p.id})">
                     </td>
                 `;
             });
