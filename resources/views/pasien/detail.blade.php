@@ -227,7 +227,7 @@
                 document.getElementById('alamat').textContent = pasien.alamat || '-';
 
                 // Atur link tombol Edit secara dinamis
-                editButton.href = `index-pasien_edit.html?rm=${pasien.rm}`;
+                editButton.href = `/pasien/${encodeURIComponent(pasien.rm)}/edit`;
 
                 // Tampilkan container detail setelah data dimuat
                 loadingMessage.style.display = 'none';

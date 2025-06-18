@@ -98,7 +98,7 @@
     <section class="home-section">
         <div class="home-content">
             <i class="bx bx-menu"></i>
-            <div class="profile-trigger" onclick="toggleProfilePopup()"><img src="{{ asset('image/admin.svg') }}" alt="Logo RS"><span class="logo_name"><h5>RUMAH SAKIT ISLAM<br>BANJARMASIN</h5></span></div>
+            <div class="profile-trigger" onclick="toggleProfilePopup()"><img src="{{ asset('image/admin.svg') }}" alt="Logo RS"><span class="logo_name"></span></div>
 <div id="profile-popup" class="profile-popup hidden">
                 <div class="popup-content">
                     <img src="{{ asset('image/admin.svg') }}" alt="User" class="popup-icon">
@@ -114,7 +114,7 @@
     <main>
         <div class="main-content">
             <h3>Data Pasien</h3>
-            <a href="index-pasien_tambah.html" class="add-btn">
+            <a href="{{ route('pasien.tambah') }}" class="add-btn">
                 Tambah <i class="bx bxs-plus-circle"></i>
             </a>
         </div>
@@ -235,7 +235,7 @@
                         <td>${pasien.email_pasien || '-'}</td>
                         <td>${pasien.gol_darah || '-'}</td>
                         <td>
-                            <a href="index-pasien_detail.html?rm=${pasien.rm}"><img src="{{ asset('image/logo.svg') }}" alt="Logo RS"><span class="logo_name"><h5>RUMAH SAKIT ISLAM<br>BANJARMASIN</h5></span></div>eye.svg" alt="Detail" class="aksi"></a>
+                            <a href="{{ route('pasien.detail', ['rm' => '${pasien.rm}']) }}"><img src="{{ asset('image/logo.svg') }}" alt="edit"></a>
                         </td>
                     `;
                     pasienTableBody.appendChild(row);

@@ -126,7 +126,7 @@
         <div class="main-content">
             <h3>Pendaftaran Hari Ini</h3>
             <div id="tanggalHari" style="text-align:right; margin-bottom:10px; font-weight:500; color:#333;"></div>
-            <a href="index-pendaftaran_tambah.html" class="add-btn">Tambah <i class="bx bxs-plus-circle"></i></a>
+            <a href="{{ route('pendaftaran.tambah') }}" class="add-btn">Tambah <i class="bx bxs-plus-circle"></i></a>
         </div>
         <div class="card">
             <div id="loadingMessage" class="info-message">Memuat data pendaftaran...</div>

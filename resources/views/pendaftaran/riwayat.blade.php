@@ -104,12 +104,12 @@
         <div class="home-content">
             <i class="bx bx-menu"></i>
             <div class="profile-trigger" onclick="toggleProfilePopup()">
-                <img src="image/admin.svg" alt="User" class="profile-icon">
+                <img src="{{ asset('image/admin.svg') }}" alt="User" class="profile-icon">
             </div>
 
             <div id="profile-popup" class="profile-popup hidden">
                 <div class="popup-content">
-                    <img src="image/admin.svg" alt="User" class="popup-icon">
+                    <img src="{{ asset('image/admin.svg') }}" alt="User" class="popup-icon">
                     <div>
                         <div class="popup-name" id="userNameDisplay">Memuat...</div>
                         <div class="popup-role" id="userRoleDisplay">Memuat...</div>
