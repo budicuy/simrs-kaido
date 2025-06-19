@@ -22,12 +22,12 @@ class UpdatePendaftaranRequest extends FormRequest
     public function rules(): array
     {
         return [
-			'rm' => 'required|integer|exists:pasiens,rm',
-			'id_poli' => 'required|integer|exists:polis,id',
-			'tgl_kunjungan' => 'required|date',
-			'no_antrian' => 'required|integer|min:1',
-			'status' => 'required|string|in:Menunggu,Dipanggil,Diperiksa,Selesai'
-		];
+            'rm' => 'required|integer|exists:pasiens,rm',
+            'id_poli' => 'required|integer|exists:polis,id',
+            'tgl_kunjungan' => 'required|date',
+            'no_antrian' => 'required|integer|min:1',
+            'status' => 'required|string|in:Menunggu,Dipanggil,Diperiksa,Selesai'
+        ];
     }
 
     /**

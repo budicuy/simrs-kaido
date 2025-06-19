@@ -10,10 +10,10 @@ class Pendaftaran extends Model
 {
     // Specify the primary key
     protected $primaryKey = 'rm';
-    
+
     // Indicate that the primary key is not auto-incrementing
     public $incrementing = false;
-    
+
     // Specify the data type of the primary key
     protected $keyType = 'int';
 
@@ -25,10 +25,10 @@ class Pendaftaran extends Model
         'no_antrian',
         'status'
     ];
-    
+
     // add hidden
     protected $hidden = ['created_at', 'updated_at'];
-    
+
     // Add casts for proper data handling
     protected $casts = [
         'tgl_kunjungan' => 'datetime',

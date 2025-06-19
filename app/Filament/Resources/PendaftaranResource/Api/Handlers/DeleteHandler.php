@@ -8,7 +8,7 @@ use App\Filament\Resources\PendaftaranResource;
 
 class DeleteHandler extends Handlers
 {
-    public static string | null $uri = '/{rm}';
+    public static string | null $uri = '/{id}';
     public static string | null $resource = PendaftaranResource::class;
 
     public static function getMethod()
@@ -29,9 +29,9 @@ class DeleteHandler extends Handlers
      */
     public function handler(Request $request)
     {
-        $rm = $request->route('rm');
+        $id = $request->route('id');
 
-        $model = static::getModel()::where('rm', $rm)->first();
+        $model = static::getModel()::where('id', $id)->first();
 
         if (!$model) return static::sendNotFoundResponse();
 
