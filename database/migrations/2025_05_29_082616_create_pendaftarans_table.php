@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('pendaftarans', function (Blueprint $table) {
-            $table->unsignedInteger('rm')->unique()->primary();
+            $table->id();
+            $table->unsignedInteger('rm')->unique();
             $table->unsignedBigInteger('id_poli');
             $table->dateTime('tgl_kunjungan');
             $table->smallInteger('no_antrian');

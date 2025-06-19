@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Rumah Sakit Islam Banjarmasin</title>
-    <link rel="stylesheet" href="style/login.css">
-    <link rel="icon" href="/image/logo_rs.png" type="image/png">
+    <link rel="stylesheet" href="{{ asset('css/style/login.css') }}">
+    <link rel="icon" href="{{ asset('image/logo_rs.png') }}" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
 
@@ -16,7 +16,7 @@
 <body>
     <header>
         <div class="header-container">
-            <img src="/image/logo_rs.png" alt="Logo Rumah Sakit" class="logo">
+            <img src="{{ asset('image/logo_rs.png') }}" alt="Logo Rumah Sakit" class="logo">
             <h1>RUMAH SAKIT ISLAM BANJARMASIN</h1>
         </div>
     </header>
@@ -27,13 +27,13 @@
             <form id="loginForm">
                 <label for="email">Email</label>
                 <div class="input-group">
-                    <img src="/image/profile.png" alt="icon Profile" class="icon">
+                    <img src="{{ asset('image/profile.png') }}" alt="icon Profile" class="icon">
                     <input type="email" id="email" placeholder="Masukkan Email Anda" required>
                 </div>
 
                 <label for="password">Kata Sandi</label>
                 <div class="input-group">
-                    <img src="/image/key.png" alt="Icon Sandi" class="icon">
+                    <img src="{{ asset('image/key.png') }}" alt="Icon Sandi" class="icon">
                     <input type="password" id="password" placeholder="Masukkan Kata Sandi Anda" required>
                 </div>
 
@@ -112,20 +112,20 @@
                     // Pastikan userRole bertipe string untuk perbandingan yang konsisten
                     const roleStr = String(userRole);
                     if (roleStr === 'admin') {
-                        window.location.href = '/login'; // Admin
+                        window.location.href = '/dashboard'; // Admin
                     } else if (roleStr === 'super_admin' || roleStr === '1') {
-                        window.location.href = '/login'; // Admin pendaftaran
-                    } else if (roleStr === '3') {
+                        window.location.href = '/dashboard'; // Admin pendaftaran
+                    } else if (roleStr === 'Dokter') {
                         window.location.href = 'https://ti054a02.agussbn.my.id'; // Dokter
-                    } else if (roleStr === '4') {
+                    } else if (roleStr === 'Perawat') {
                         window.location.href = 'https://ti054a02.agussbn.my.id'; // Perawat
-                    } else if (roleStr === '5') {
+                    } else if (roleStr === 'kasir' || roleStr === '5') {
                         window.location.href = 'https://ti054a03.agussbn.my.id'; // Petugas Kasir
-                    } else if (roleStr === '6') {
+                    } else if (roleStr === 'Admin Kasir' || roleStr === '3') {
                         window.location.href = 'https://ti054a03.agussbn.my.id'; // Admin Kasir
-                    } else if (roleStr === '7') {
+                    } else if (roleStr === 'Petugas Apotik') {
                         window.location.href = 'https://ti054a04.agussbn.my.id'; // Petugas Apotik
-                    } else if (roleStr === '8') {
+                    } else if (roleStr === 'Admin Apotik') {
                         window.location.href = 'https://ti054a04.agussbn.my.id'; // Admin Apotik
                     } else {
                         showMessage('Role pengguna tidak dikenali. Silakan hubungi admin.', 'error');
